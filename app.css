@@ -37,8 +37,24 @@ a:hover{
     color:var(--hotmag);
     text-decoration: none;
 }
+img{
+    width:100%;
+}
+.section-plum{
+    background-color: var(--plum);
+}
+.section-dkblue{
+    background-color: var(--dkblue);
+}
+.gradient{
+    background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(134,251,251,1) 100%);
+    height: 2px;
+}
 #intro{
-    padding-bottom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 #intro p{
     font-size: 1rem;
@@ -62,16 +78,18 @@ a:hover{
     width:400px;
     text-align: center;
     margin:0 auto;
-    padding: 3rem 0;
+    padding:  3rem 0;
+    
 }
 #contact p:last-child{
     margin-top: 3rem;
+    
     
 }
 nav{
     font-family: var(--mono);
     font-size:80%;
-    padding:1 rem;
+    padding:1rem;
 }
 nav h1 a{
     font-family: var(--sans);
@@ -112,6 +130,8 @@ nav a:hover{
     background-color: var(--magenta);
     padding: 0.5rem;
     border-radius:5px;
+    font-family: var(--mono);
+    text-decoration: none;
 }
 .button:hover{
     color: var(--white);
@@ -132,6 +152,69 @@ footer ul{
     gap:3rem;
     font-size:3rem;
     
+}
+#projects  {
+    padding: 4rem  1rem;
+
+}
+#projects h2{
+    font-size: 2.5rem;
+    margin-bottom:calc(2.5rem*1.5); 
+}
+#projects h3{
+    color: var(--aqua);
+}
+#projects h4{
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+.blackbox{
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10%;
+    color:var(--white);
+    font-size:1rem;
+    line-height:1.5;
+
+}
+#projects ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    gap:1rem;
+    font-size: 1rem;
+}
+#projects img{
+    margin:2rem 0 4rem 0;
+    border-left:1px solid var(--aqua);
+    border-top: 1px solid var(--aqua) ;
+    border-radius: 25px;
+    padding:1rem;
+}
+@media (min-width:550px){
+    article{
+        display:grid;
+        grid-template-columns: repeat(10,1fr);
+    }
+    #projects img{
+        grid-column: 1/6;
+        grid-row:1/2;
+    }
+
+    .text{
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order:2;
+        text-align: right;
+    }
+    #projects ul{
+        
+        justify-content: flex-end;
+    }
 }
 @media (min-width:850px){
     nav{
